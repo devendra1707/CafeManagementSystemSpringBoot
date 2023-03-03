@@ -1,0 +1,206 @@
+Cafa Management System
+
+generate token
+
+post => http://localhost:8081/user/login    // For Generate Token
+{
+    "email": "tom1@gmail.com",
+    "password": "9848317420"
+}
+
+{"Token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0b20xQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTY3NzQ2MDAwNiwiaWF0IjoxNjc3NDI0MDA2fQ.CsZ0UoALSZ9oxa5lkS_mkFwusY4Ab_7L7DNlcB7K62c"}
+
+Register
+Post => http://localhost:8081/user/signup
+
+{
+    "name": "Tom",
+    "contactNumber" : "9898981234",
+    "email": "tom1@gmail.com",
+    "password": "9848317420",
+    "status": "true"
+}
+
+get all => http://localhost:8081/user/get
+[
+    {
+        "id": 1,
+        "name": "Devendra",
+        "email": "dev@gmail.com",
+        "contactNumber": "123456",
+        "status": "true"
+    },
+    {
+        "id": 2,
+        "name": "Anil",
+        "email": "anil@gmail.com",
+        "contactNumber": "123456",
+        "status": "false"
+    },
+    {
+        "id": 3,
+        "name": "as",
+        "email": "as@gmail.com",
+        "contactNumber": "123456",
+        "status": "true"
+    },
+    {
+        "id": 6,
+        "name": "as4",
+        "email": "as4@gmail.com",
+        "contactNumber": "123456",
+        "status": "false"
+    }
+]
+
+update 
+post=> http://localhost:8081/user/update
+{
+        "id": 1,
+        "status": "true"
+}
+
+Change Password
+
+Post => http://localhost:8081/user/changePassword
+{
+        "oldPassword": 9848317420,
+        "newPassword": 12345
+}
+
+Forgot password
+Post = > http://localhost:8081/user/forgotPassword
+{
+    "email":"as2@gmail.com"
+}
+
+---------------------------------------------------------
+
+add category
+
+post http://localhost:8081/category/add
+{
+        "name": "as"
+}
+
+get category
+get => http://localhost:8081/category/get
+
+update category
+
+
+post => http://localhost:8081/category/update
+
+{
+        "id": 2,
+        "name": "Dosha"
+}
+
+--------------------------------------------------------------------------------
+Add Product
+
+Post => http://localhost:8081/product/add
+
+{
+    "categoryId": "2",
+    "name" : "Corn Pizza",
+    "description": "Nice Pizza with corn",
+    "price" : "159"
+}
+
+update product
+
+post => http://localhost:8081/product/update
+
+delete product
+
+delete product
+
+post => http://localhost:8081/product/delete/1
+
+
+
+Update Product status
+
+Post => http://localhost:8081/product/updateStatus
+
+{
+    "status" : "false",
+    "id" : 2
+}
+
+get product by id
+ get http://localhost:8081/product/getById/2
+ 
+ ------------------------------------------------------------------
+ Bill
+ 
+ Get Bill
+
+get => http://localhost:8081/bill/getBills
+
+
+get pdf Bill
+
+post => http://localhost:8081/bill/getPdf
+
+delete Bill
+
+post = > http://localhost:8081/bill/delete/2
+
+------------------------------------------------------------------------------
+
+Dashboard
+
+get all product, bill, category
+
+get => http://localhost:8081/dashboard/details
+
+{
+    "product": 1,
+    "bill": 0,
+    "categort": 3
+}
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
